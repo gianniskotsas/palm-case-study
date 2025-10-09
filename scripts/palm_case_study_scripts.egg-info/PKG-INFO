@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: palm-case-study-scripts
+Version: 0.1.0
+Summary: Financial analysis and plotting environment for scripts/
+Author: Giannis Kotsas
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: pandas>=2.2
+Requires-Dist: numpy>=1.26
+Requires-Dist: pyarrow>=15
+Requires-Dist: matplotlib>=3.8
+Requires-Dist: seaborn>=0.13
+Requires-Dist: plotly>=5.22
+Requires-Dist: scipy>=1.11
+Requires-Dist: statsmodels>=0.14
+Requires-Dist: scikit-learn>=1.4
+Requires-Dist: jupyter>=1.0
+Requires-Dist: ipykernel>=6.29
+Requires-Dist: jupyterlab>=4.2
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: openai>=1.0

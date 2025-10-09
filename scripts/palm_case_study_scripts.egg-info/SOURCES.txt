@@ -1,0 +1,6 @@
+pyproject.toml
+palm_case_study_scripts.egg-info/PKG-INFO
+palm_case_study_scripts.egg-info/SOURCES.txt
+palm_case_study_scripts.egg-info/dependency_links.txt
+palm_case_study_scripts.egg-info/requires.txt
+palm_case_study_scripts.egg-info/top_level.txt

@@ -1,11 +1,18 @@
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Instrument_Serif } from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from 'next-themes';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin']
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: '--font-instrument-serif',
+  subsets: ['latin'],
+  weight: ['400']
 });
 
 export const metadata: Metadata = {
@@ -19,10 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+     
+      <body className={`${geistSans.variable} ${instrumentSerif.variable} antialiased`}>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem
+        disableTransitionOnChange
+      >
         {children}
-        <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );
