@@ -30,8 +30,8 @@ export function AvatarInfo() {
             <div>
               <h4 className="text-sm font-semibold leading-none">Giannis Kotsakiachidis</h4>
               <div className="flex items-center gap-1.5 mt-2">
-                <span className="text-lg leading-none">🇬🇷</span>
-                <p className="text-xs text-muted-foreground">Greek</p>
+                <span className="text-lg leading-none">🇳🇱</span>
+                <p className="text-xs text-muted-foreground">Delft, Netherlands</p>
               </div>
             </div>
 

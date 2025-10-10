@@ -12,6 +12,7 @@ import BalanceReconciliationChart from "@/components/blocks/balance_reconciliati
 import UserForecastStatusBreakdown from "@/components/blocks/user_forecast_status_breakdown";
 import SystemForecastCoverageGrid from "@/components/blocks/system_forecast_coverage_grid";
 import TransactionQualityMetrics from "@/components/blocks/transaction_quality_metrics";
+import ToolsMethodology from "@/components/blocks/tools_methodology";
 import { LineChart } from "@/components/charts/LineChart";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { AvatarInfo } from "@/components/ui/avatar-info";
@@ -31,6 +32,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { motion } from "motion/react";
+import LightRays from "@/components/ui/LightRays";
+import Magnet from "@/components/ui/magnet";
 
 export default function HomePage() {
   // Cash flow drivers data from Python analysis
@@ -115,14 +118,28 @@ export default function HomePage() {
       <div className="fixed top-12 left-10 z-50">
         <AvatarInfo />
       </div>
-      
+
       <div className="relative min-h-screen flex flex-col gap-2 mb-12 w-full text-center justify-center items-center overflow-hidden">
-        <Spotlight
+        {/* <Spotlight
           gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(210, 100%, 85%, .08) 0, hsla(210, 100%, 55%, .02) 50%, hsla(210, 100%, 45%, 0) 80%)"
           gradientSecond=""
           gradientThird=""
-        />
-    
+        /> */}
+        <div className="absolute inset-0 z-0">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#ffffff"
+            raysSpeed={1.5}
+            lightSpread={0.8}
+            rayLength={1.2}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0.1}
+            distortion={0.05}
+            className="custom-rays"
+          />
+        </div>
+
         <h1 className="text-5xl lg:text-7xl relative z-50">
           ResortChain Report
           <motion.div
@@ -162,20 +179,22 @@ export default function HomePage() {
           </motion.div>
         </h1>
 
-
         <p className="text-md lg:text-xl text-muted-foreground relative z-50">
           A Palm Case Study
         </p>
-
-        <Button
-          className="w-fit mt-4 px-8 relative z-50"
-          variant="secondary"
-          onClick={() => {
-            document.getElementById("content")?.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          Get Started
-        </Button>
+        <Magnet padding={100} disabled={false} magnetStrength={10}>
+          <Button
+            className="w-fit mt-8 py-6 px-12 relative z-50"
+            variant="secondary"
+            onClick={() => {
+              document
+                .getElementById("content")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Start Reading{" "}
+          </Button>
+        </Magnet>
       </div>
       <section className="w-full max-w-3xl" id="content">
         <div className="w-full gap-4 flex flex-col">
@@ -439,6 +458,16 @@ export default function HomePage() {
               </p>
               <TransactionQualityMetrics />
             </div>
+          </div>
+
+          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t">
+            <div className="w-full flex flex-col gap-2">
+              <h2 className="text-2xl lg:text-3xl">Tools & Methodology</h2>
+              <p className="text-md text-muted-foreground">
+                This comprehensive analysis was built using a modern stack of AI-powered tools and development frameworks. Here's a timeline of the tools and methodologies that made this report possible.
+              </p>
+            </div>
+            <ToolsMethodology />
           </div>
 
           <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t">
