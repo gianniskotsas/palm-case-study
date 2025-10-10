@@ -16,8 +16,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: 'Platforms Starter Kit',
-  description: 'Next.js template for building a multi-tenant SaaS.'
+  title: 'Palm Case Study',
+  description: 'By Giannis Kotsakiachidis'
 };
 
 export default function RootLayout({
