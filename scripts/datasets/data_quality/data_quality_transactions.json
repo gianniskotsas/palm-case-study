@@ -1,0 +1,31 @@
+{
+  "total_transactions": 1244,
+  "date_range": {
+    "min_date": "2025-01-01",
+    "max_date": "2025-08-31",
+    "days_span": 242
+  },
+  "transactions_by_category": {
+    "cash_out_foreign_exchange_expenses": 153,
+    "cash_in_tax_income": 148,
+    "cash_out_payroll": 144,
+    "cash_out_resort_maintenance_expenses": 141,
+    "cash_out_tax_payments": 139,
+    "cash_out_insurance_costs": 133,
+    "cash_in_investments_income": 130,
+    "cash_out_investments_outflow": 129,
+    "cash_in_resort_revenue": 127
+  },
+  "credit_debit_distribution": {
+    "DBIT": 839,
+    "CRDT": 405
+  },
+  "data_quality_flags": {
+    "potential_duplicates": 0,
+    "missing_dates": 0,
+    "missing_amounts": 0,
+    "missing_categories": 0,
+    "total_issues": 0
+  },
+  "quality_score": 100.0
+}

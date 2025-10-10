@@ -1,0 +1,313 @@
+{
+  "coverage_by_method": {
+    "ml_model": {
+      "cash_in_resort_revenue": {
+        "covered_days": 201,
+        "total_days": 243,
+        "coverage_pct": 82.72,
+        "missing_days": 42
+      },
+      "cash_out_investments_outflow": {
+        "covered_days": 180,
+        "total_days": 243,
+        "coverage_pct": 74.07,
+        "missing_days": 63
+      },
+      "cash_out_foreign_exchange_expenses": {
+        "covered_days": 189,
+        "total_days": 243,
+        "coverage_pct": 77.78,
+        "missing_days": 54
+      },
+      "cash_out_tax_payments": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_out_insurance_costs": {
+        "covered_days": 119,
+        "total_days": 243,
+        "coverage_pct": 48.97,
+        "missing_days": 124
+      },
+      "cash_out_resort_maintenance_expenses": {
+        "covered_days": 91,
+        "total_days": 243,
+        "coverage_pct": 37.45,
+        "missing_days": 152
+      },
+      "cash_in_tax_income": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_out_payroll": {
+        "covered_days": 189,
+        "total_days": 243,
+        "coverage_pct": 77.78,
+        "missing_days": 54
+      },
+      "cash_in_investments_income": {
+        "covered_days": 91,
+        "total_days": 243,
+        "coverage_pct": 37.45,
+        "missing_days": 152
+      }
+    },
+    "statistical_model": {
+      "cash_in_resort_revenue": {
+        "covered_days": 217,
+        "total_days": 243,
+        "coverage_pct": 89.3,
+        "missing_days": 26
+      },
+      "cash_out_investments_outflow": {
+        "covered_days": 147,
+        "total_days": 243,
+        "coverage_pct": 60.49,
+        "missing_days": 96
+      },
+      "cash_out_foreign_exchange_expenses": {
+        "covered_days": 161,
+        "total_days": 243,
+        "coverage_pct": 66.26,
+        "missing_days": 82
+      },
+      "cash_out_tax_payments": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_out_insurance_costs": {
+        "covered_days": 203,
+        "total_days": 243,
+        "coverage_pct": 83.54,
+        "missing_days": 40
+      },
+      "cash_out_resort_maintenance_expenses": {
+        "covered_days": 175,
+        "total_days": 243,
+        "coverage_pct": 72.02,
+        "missing_days": 68
+      },
+      "cash_in_tax_income": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_out_payroll": {
+        "covered_days": 243,
+        "total_days": 243,
+        "coverage_pct": 100.0,
+        "missing_days": 0
+      },
+      "cash_in_investments_income": {
+        "covered_days": 215,
+        "total_days": 243,
+        "coverage_pct": 88.48,
+        "missing_days": 28
+      }
+    },
+    "foundation_model": {
+      "cash_in_resort_revenue": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_out_investments_outflow": {
+        "covered_days": 161,
+        "total_days": 243,
+        "coverage_pct": 66.26,
+        "missing_days": 82
+      },
+      "cash_out_foreign_exchange_expenses": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_out_tax_payments": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_out_insurance_costs": {
+        "covered_days": 215,
+        "total_days": 243,
+        "coverage_pct": 88.48,
+        "missing_days": 28
+      },
+      "cash_out_resort_maintenance_expenses": {
+        "covered_days": 217,
+        "total_days": 243,
+        "coverage_pct": 89.3,
+        "missing_days": 26
+      },
+      "cash_in_tax_income": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_out_payroll": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_in_investments_income": {
+        "covered_days": 161,
+        "total_days": 243,
+        "coverage_pct": 66.26,
+        "missing_days": 82
+      }
+    },
+    "static": {
+      "cash_in_resort_revenue": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_out_investments_outflow": {
+        "covered_days": 210,
+        "total_days": 243,
+        "coverage_pct": 86.42,
+        "missing_days": 33
+      },
+      "cash_out_foreign_exchange_expenses": {
+        "covered_days": 215,
+        "total_days": 243,
+        "coverage_pct": 88.48,
+        "missing_days": 28
+      },
+      "cash_out_tax_payments": {
+        "covered_days": 243,
+        "total_days": 243,
+        "coverage_pct": 100.0,
+        "missing_days": 0
+      },
+      "cash_out_insurance_costs": {
+        "covered_days": 91,
+        "total_days": 243,
+        "coverage_pct": 37.45,
+        "missing_days": 152
+      },
+      "cash_out_resort_maintenance_expenses": {
+        "covered_days": 103,
+        "total_days": 243,
+        "coverage_pct": 42.39,
+        "missing_days": 140
+      },
+      "cash_in_tax_income": {
+        "covered_days": 243,
+        "total_days": 243,
+        "coverage_pct": 100.0,
+        "missing_days": 0
+      },
+      "cash_out_payroll": {
+        "covered_days": 0,
+        "total_days": 243,
+        "coverage_pct": 0.0,
+        "missing_days": 243
+      },
+      "cash_in_investments_income": {
+        "covered_days": 175,
+        "total_days": 243,
+        "coverage_pct": 72.02,
+        "missing_days": 68
+      }
+    }
+  },
+  "overall_coverage": {
+    "ml_model": {
+      "coverage_pct": 48.47,
+      "covered": 1060,
+      "total": 2187
+    },
+    "statistical_model": {
+      "coverage_pct": 62.23,
+      "covered": 1361,
+      "total": 2187
+    },
+    "foundation_model": {
+      "coverage_pct": 34.48,
+      "covered": 754,
+      "total": 2187
+    },
+    "static": {
+      "coverage_pct": 58.53,
+      "covered": 1280,
+      "total": 2187
+    }
+  },
+  "gaps_by_category": {
+    "cash_in_resort_revenue": {
+      "ml_model": 42,
+      "statistical_model": 26,
+      "foundation_model": 243,
+      "static": 243
+    },
+    "cash_out_investments_outflow": {
+      "ml_model": 63,
+      "statistical_model": 96,
+      "foundation_model": 82,
+      "static": 33
+    },
+    "cash_out_foreign_exchange_expenses": {
+      "ml_model": 54,
+      "statistical_model": 82,
+      "foundation_model": 243,
+      "static": 28
+    },
+    "cash_out_tax_payments": {
+      "ml_model": 243,
+      "statistical_model": 243,
+      "foundation_model": 243,
+      "static": 0
+    },
+    "cash_out_insurance_costs": {
+      "ml_model": 124,
+      "statistical_model": 40,
+      "foundation_model": 28,
+      "static": 152
+    },
+    "cash_out_resort_maintenance_expenses": {
+      "ml_model": 152,
+      "statistical_model": 68,
+      "foundation_model": 26,
+      "static": 140
+    },
+    "cash_in_tax_income": {
+      "ml_model": 243,
+      "statistical_model": 243,
+      "foundation_model": 243,
+      "static": 0
+    },
+    "cash_out_payroll": {
+      "ml_model": 54,
+      "statistical_model": 0,
+      "foundation_model": 243,
+      "static": 243
+    },
+    "cash_in_investments_income": {
+      "ml_model": 152,
+      "statistical_model": 28,
+      "foundation_model": 82,
+      "static": 68
+    }
+  },
+  "date_range": {
+    "start": "2025-01-01",
+    "end": "2025-08-31",
+    "total_days": 243
+  },
+  "categories_analyzed": 9,
+  "methods_analyzed": 4
+}

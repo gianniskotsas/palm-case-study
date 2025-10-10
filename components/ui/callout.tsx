@@ -66,13 +66,17 @@ const Callout = React.forwardRef<HTMLDivElement, CalloutProps>(
         {...props}
       >
         <div className={cx("flex items-start")}>
-          {Icon && typeof Icon === "function" ? (
-            <Icon
-              className={cx("mr-1.5 h-5 w-5 shrink-0")}
-              aria-hidden="true"
-            />
-          ) : (
-            Icon
+          {Icon && (
+            typeof Icon === "function" || typeof Icon === "object" ? (
+              React.isValidElement(Icon) ? (
+                Icon
+              ) : (
+                <Icon
+                  className={cx("mr-1.5 h-5 w-5 shrink-0")}
+                  aria-hidden="true"
+                />
+              )
+            ) : null
           )}
           <span className={cx("font-semibold text-foreground")}>{title}</span>
         </div>

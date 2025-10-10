@@ -1,0 +1,36 @@
+{
+  "total_forecasts": 267,
+  "status_breakdown": {
+    "counts": {
+      "cancelled": 71,
+      "unverified": 69,
+      "verified": 64,
+      "dismissed": 63
+    },
+    "percentages": {
+      "cancelled": 26.59,
+      "unverified": 25.84,
+      "verified": 23.97,
+      "dismissed": 23.6
+    }
+  },
+  "missing_data": {
+    "missing_amounts": 0,
+    "zero_amounts": 51,
+    "total_problematic": 51
+  },
+  "forecast_sources": {
+    "file": 216,
+    "erp": 35,
+    "one-off": 16
+  },
+  "top_categories": {
+    "cash_in_investments_income": 72,
+    "cash_out_investments_outflow": 72,
+    "cash_out_payroll": 72,
+    "cash_in_resort_revenue": 35,
+    "cash_out_tax_payments": 8,
+    "cash_in_tax_income": 8
+  },
+  "quality_score": 24.0
+}
