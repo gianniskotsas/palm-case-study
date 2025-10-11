@@ -451,6 +451,10 @@ export default function HomePage() {
                 the unified forecast with user overrides incorporates verified
                 manual predictions from the finance team.
               </p>
+              <Callout title="Assumption" variant="default" className="mt-4 mb-8">
+                I assumed that the forecasted values where expressed in Eurocents and not in Euros. Therefore, I converted the values to Euros by dividing by 100.
+                If that&apos;s not the case, then the all forecast models would be off by a factor of 100, deeming them not fit for purpose.
+              </Callout>
             </div>
             <ForecastAnalysis />
           </div>
