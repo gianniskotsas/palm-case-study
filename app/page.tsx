@@ -34,6 +34,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import LightRays from "@/components/ui/LightRays";
 import Magnet from "@/components/ui/magnet";
+import BubbleMenu from "@/components/ui/BubbleMenu";
 
 export default function HomePage() {
   // Cash flow drivers data from Python analysis
@@ -115,6 +116,8 @@ export default function HomePage() {
   return (
     <main className="flex min-h-screen w-full flex-col items-center pb-32 bg-background relative">
       {/* Avatar Info - Fixed Top Left */}
+
+     
       <div className="fixed top-12 left-10 z-50">
         <AvatarInfo />
       </div>
@@ -464,7 +467,9 @@ export default function HomePage() {
             <div className="w-full flex flex-col gap-2">
               <h2 className="text-2xl lg:text-3xl">Tools & Methodology</h2>
               <p className="text-md text-muted-foreground">
-                This comprehensive analysis was built using a modern stack of AI-powered tools and development frameworks. Here's a timeline of the tools and methodologies that made this report possible.
+                This comprehensive analysis was built using a modern stack of
+                AI-powered tools and development frameworks. Here's a timeline
+                of the tools and methodologies that made this report possible.
               </p>
             </div>
             <ToolsMethodology />
