@@ -256,10 +256,10 @@ export default function HomePage() {
       </div>
       <section className="w-full max-w-3xl" id="content">
         <div className="w-full gap-4 flex flex-col">
-          <div className="w-full flex flex-col gap-2" id="cash-flow">
-            <h2 className="text-2xl lg:text-3xl">
-              Monthly Expenses vs Revenue
-            </h2>
+          <div className="w-full py-12 flex flex-col gap-2" id="cash-flow">
+            <h1 className="text-3xl lg:text-4xl">
+              Cash Flow Analysis
+            </h1>
             <p className="text-md text-muted-foreground">
               The monthly financial data reveals a concerning operational
               pattern: the resort operates at a net loss in all months, with
