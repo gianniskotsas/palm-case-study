@@ -99,57 +99,61 @@ const SparkAreaChart = React.forwardRef<HTMLDivElement, SparkAreaChartProps>(
             }}
             stackOffset={type === "percent" ? "expand" : undefined}
           >
+            <defs>
+              {categories.map((category) => {
+                const categoryId = `${areaId}-${category.replace(/[^a-zA-Z0-9]/g, "")}`
+                return (
+                  <linearGradient
+                    key={category}
+                    className={cx(
+                      getColorClassName(
+                        categoryColors.get(
+                          category,
+                        ) as AvailableChartColorsKeys,
+                        "text",
+                      ),
+                    )}
+                    id={categoryId}
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="1"
+                  >
+                    {getFillContent(fill)}
+                  </linearGradient>
+                )
+              })}
+            </defs>
             <XAxis hide dataKey={index} />
             <YAxis hide={true} domain={yAxisDomain as AxisDomain} />
 
             {categories.map((category) => {
               const categoryId = `${areaId}-${category.replace(/[^a-zA-Z0-9]/g, "")}`
               return (
-                <React.Fragment key={category}>
-                  <defs>
-                    <linearGradient
-                      key={category}
-                      className={cx(
-                        getColorClassName(
-                          categoryColors.get(
-                            category,
-                          ) as AvailableChartColorsKeys,
-                          "text",
-                        ),
-                      )}
-                      id={categoryId}
-                      x1="0"
-                      y1="0"
-                      x2="0"
-                      y2="1"
-                    >
-                      {getFillContent(fill)}
-                    </linearGradient>
-                  </defs>
-                  <Area
-                    className={cx(
-                      getColorClassName(
-                        categoryColors.get(
-                          category,
-                        ) as AvailableChartColorsKeys,
-                        "stroke",
-                      ),
-                    )}
-                    dot={false}
-                    strokeOpacity={1}
-                    name={category}
-                    type="linear"
-                    dataKey={category}
-                    stroke=""
-                    strokeWidth={2}
-                    strokeLinejoin="round"
-                    strokeLinecap="round"
-                    isAnimationActive={false}
-                    connectNulls={connectNulls}
-                    stackId={stacked ? "stack" : undefined}
-                    fill={`url(#${categoryId})`}
-                  />
-                </React.Fragment>
+                <Area
+                  key={category}
+                  className={cx(
+                    getColorClassName(
+                      categoryColors.get(
+                        category,
+                      ) as AvailableChartColorsKeys,
+                      "stroke",
+                    ),
+                  )}
+                  dot={false}
+                  strokeOpacity={1}
+                  name={category}
+                  type="linear"
+                  dataKey={category}
+                  stroke=""
+                  strokeWidth={2}
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                  isAnimationActive={false}
+                  connectNulls={connectNulls}
+                  stackId={stacked ? "stack" : undefined}
+                  fill={`url(#${categoryId})`}
+                />
               )
             })}
           </RechartsAreaChart>
