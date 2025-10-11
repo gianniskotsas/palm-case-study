@@ -96,15 +96,15 @@ export default function TransactionQualityMetrics() {
   }
 
   const getQualityColor = (score: number) => {
-    if (score >= 95) return "text-green-600";
-    if (score >= 85) return "text-yellow-600";
-    return "text-red-600";
+    if (score >= 95) return "";
+    if (score >= 85) return "";
+    return "";
   };
 
   const getIssueColor = (count: number) => {
-    if (count === 0) return "text-green-600";
-    if (count <= 10) return "text-yellow-600";
-    return "text-red-600";
+    if (count === 0) return "";
+    if (count <= 10) return "";
+    return "";
   };
 
   const categoryLabels: Record<string, string> = {
@@ -144,7 +144,7 @@ export default function TransactionQualityMetrics() {
         {/* Data Quality Score */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Quality Score</CardTitle>
+            <CardTitle className="text-sm font-medium">Quality <br /> Score</CardTitle>
             <TrendingUp className={`h-4 w-4 ${getQualityColor(data.quality_score)}`} />
           </CardHeader>
           <CardContent>
@@ -176,7 +176,7 @@ export default function TransactionQualityMetrics() {
         {/* Total Issues */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Data Issues</CardTitle>
+            <CardTitle className="text-sm font-medium">Data <br className="hidden md:block"/> Issues</CardTitle>
             <AlertTriangle className={`h-4 w-4 ${getIssueColor(data.data_quality_flags.total_issues)}`} />
           </CardHeader>
           <CardContent>

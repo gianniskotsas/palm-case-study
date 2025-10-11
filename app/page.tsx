@@ -35,8 +35,33 @@ import { motion } from "motion/react";
 import LightRays from "@/components/ui/LightRays";
 import Magnet from "@/components/ui/magnet";
 import BubbleMenu from "@/components/ui/BubbleMenu";
+import StaggeredMenu from "@/components/ui/StaggeredMenu";
+import Link from "next/link";
 
 export default function HomePage() {
+  const menuItems = [
+    { label: "Home", ariaLabel: "Go to home page", link: "#" },
+    { label: "Cash flow", ariaLabel: "Cash flow", link: "#cash-flow" },
+    { label: "Forecast", ariaLabel: "Forecast", link: "#forecast" },
+    { label: "Recommendations", ariaLabel: "Recommendations", link: "#recommendations" },
+    { label: "Data quality", ariaLabel: "Data quality", link: "#data-quality" },
+    { label: "Tools", ariaLabel: "Tools", link: "#tools" },
+    { label: "Fun 🎉", ariaLabel: " Fun 🎉", link: "#fun" },
+  ];
+
+  const socialItems = [
+    {
+      label: "Twitter",
+      link: "https://x.com/gianniskotsas_",
+      ariaLabel: "Twitter",
+    },
+    {
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/in/gianniskotsas/",
+      ariaLabel: "LinkedIn",
+    },
+    { label: "Email", link: "mailto:giannis@kotsas.com", ariaLabel: "Email" },
+  ];
   // Cash flow drivers data from Python analysis
   const cashFlowDrivers = {
     expenses: {
@@ -114,21 +139,43 @@ export default function HomePage() {
   };
 
   return (
-    <main className="flex min-h-screen w-full flex-col items-center pb-32 bg-background relative">
+    <main className="flex min-h-screen w-full px-4 flex-col items-center pb-32 bg-background relative">
       {/* Avatar Info - Fixed Top Left */}
 
-     
+      <StaggeredMenu
+        position="right"
+        items={menuItems}
+        socialItems={socialItems}
+        displaySocials={true}
+        displayItemNumbering={false}
+        menuButtonColor="#fff"
+        openMenuButtonColor="#000"
+        changeMenuColorOnOpen={true}
+        colors={["var(--primary)", "var(--chart-2)"]}
+        accentColor="var(--chart-2)"
+        isFixed
+        onMenuOpen={() => console.log("Menu opened")}
+        onMenuClose={() => console.log("Menu closed")}
+      />
+
       <div className="fixed top-12 left-10 z-50">
         <AvatarInfo />
       </div>
 
-      <div className="relative min-h-screen flex flex-col gap-2 mb-12 w-full text-center justify-center items-center overflow-hidden">
+      <div 
+        className="relative min-h-screen flex flex-col gap-2 mb-12 w-full text-center justify-center items-center overflow-hidden"
+        onClick={(e) => {
+          console.log("🎯 Click detected on hero div");
+          console.log("Clicked element:", e.target);
+          console.log("Element at click position:", document.elementFromPoint(e.clientX, e.clientY));
+        }}
+      >
         {/* <Spotlight
           gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(210, 100%, 85%, .08) 0, hsla(210, 100%, 55%, .02) 50%, hsla(210, 100%, 45%, 0) 80%)"
           gradientSecond=""
           gradientThird=""
         /> */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 pointer-events-none">
           <LightRays
             raysOrigin="top-center"
             raysColor="#ffffff"
@@ -187,21 +234,29 @@ export default function HomePage() {
         </p>
         <Magnet padding={100} disabled={false} magnetStrength={10}>
           <Button
-            className="w-fit mt-8 py-6 px-12 relative z-50"
+            className="w-fit mt-8 py-6 px-12 relative z-50 font-semibold text-lg"
             variant="secondary"
-            onClick={() => {
+            onClick={(e) => {
+              console.log("🔥 BUTTON CLICKED!", e);
+              console.log("Event target:", e.target);
+              console.log("Current target:", e.currentTarget);
               document
                 .getElementById("content")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
+            onMouseEnter={() => console.log("🖱️ Mouse entered button")}
+            onMouseLeave={() => console.log("🖱️ Mouse left button")}
+            onMouseDown={() => console.log("🖱️ Mouse down on button")}
+            onMouseUp={() => console.log("🖱️ Mouse up on button")}
+            style={{ pointerEvents: 'auto' }}
           >
-            Start Reading{" "}
+            START{" "}
           </Button>
         </Magnet>
       </div>
       <section className="w-full max-w-3xl" id="content">
         <div className="w-full gap-4 flex flex-col">
-          <div className="w-full flex flex-col gap-2">
+          <div className="w-full flex flex-col gap-2" id="cash-flow">
             <h2 className="text-2xl lg:text-3xl">
               Monthly Expenses vs Revenue
             </h2>
@@ -385,7 +440,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t">
+          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t" id="forecast">
             <div className="w-full flex flex-col gap-2">
               <h2 className="text-2xl lg:text-3xl">Forecast Analysis</h2>
               <p className="text-md text-muted-foreground">
@@ -400,7 +455,7 @@ export default function HomePage() {
             <ForecastAnalysis />
           </div>
 
-          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t">
+          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t" id="recommendations">
             <div className="w-full flex flex-col gap-2">
               <h2 className="text-2xl lg:text-3xl">Final Recommendations</h2>
               <p className="text-md text-muted-foreground">
@@ -413,7 +468,7 @@ export default function HomePage() {
             <FinalRecommendations />
           </div>
 
-          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t">
+          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t" id="data-quality">
             <div className="w-full flex flex-col gap-2">
               <h2 className="text-2xl lg:text-3xl">Data Quality Assessment</h2>
               <p className="text-md text-muted-foreground">
@@ -463,7 +518,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t">
+          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t" id="tools">
             <div className="w-full flex flex-col gap-2">
               <h2 className="text-2xl lg:text-3xl">Tools & Methodology</h2>
               <p className="text-md text-muted-foreground">
@@ -475,7 +530,7 @@ export default function HomePage() {
             <ToolsMethodology />
           </div>
 
-          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t">
+          <div className="w-full flex flex-col gap-4 mt-16 pt-16 border-t" id="fun">
             <div className="w-full flex flex-col gap-2">
               <h2 className="text-2xl lg:text-3xl">Fun Section</h2>
               <p className="text-md text-muted-foreground">

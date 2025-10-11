@@ -95,28 +95,28 @@ export default function UserForecastStatusBreakdown() {
   const statusConfig = {
     verified: {
       color: "chart-1" as const,
-      bgColor: "bg-emerald-500",
+      bgColor: "bg-[var(--chart-1)]",
       icon: CheckCircle2,
       label: "Verified",
       description: "Approved and used in analysis",
     },
     unverified: {
       color: "chart-2" as const,
-      bgColor: "bg-blue-500",
+      bgColor: "bg-[var(--chart-2)]",
       icon: HelpCircle,
       label: "Unverified",
       description: "Pending verification",
     },
     dismissed: {
       color: "chart-3" as const,
-      bgColor: "bg-amber-500",
+      bgColor: "bg-[var(--chart-3)]",
       icon: XCircle,
       label: "Dismissed",
       description: "Rejected by reviewers",
     },
     cancelled: {
       color: "chart-4" as const,
-      bgColor: "bg-red-500",
+      bgColor: "bg-[var(--chart-4)]",
       icon: Ban,
       label: "Cancelled",
       description: "Cancelled before review",
@@ -201,7 +201,7 @@ export default function UserForecastStatusBreakdown() {
             <CardTitle className="text-sm font-medium">Quality Score</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-emerald-600">
+            <div className="text-2xl font-bold text-chart-1">
               {data.quality_score}%
             </div>
             <p className="text-xs text-muted-foreground mt-1">
@@ -215,7 +215,7 @@ export default function UserForecastStatusBreakdown() {
             <CardTitle className="text-sm font-medium">Missing/Zero Values</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-amber-600">
+            <div className="text-2xl font-bold text-chart-3">
               {data.missing_data.total_problematic}
             </div>
             <p className="text-xs text-muted-foreground mt-1">

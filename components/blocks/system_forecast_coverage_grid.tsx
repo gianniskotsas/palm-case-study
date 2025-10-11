@@ -97,10 +97,10 @@ export default function SystemForecastCoverageGrid() {
   }
 
   const getCoverageColor = (percentage: number) => {
-    if (percentage >= 90) return "bg-green-500/20 text-green-700 border-green-500/30";
-    if (percentage >= 75) return "bg-yellow-500/20 text-yellow-700 border-yellow-500/30";
-    if (percentage >= 50) return "bg-orange-500/20 text-orange-700 border-orange-500/30";
-    return "bg-red-500/20 text-red-700 border-red-500/30";
+    if (percentage >= 90) return "bg-green-500/20 text-[var(--chart-1)] border-[var(--chart-1)]/30";
+    if (percentage >= 75) return "bg-yellow-500/20 text-[var(--chart-2)] border-[var(--chart-2)]/30";
+    if (percentage >= 50) return "bg-orange-500/20 text-[var(--chart-3)] border-[var(--chart-3)]/30";
+    return "bg-red-500/20 text-[var(--chart-4)] border-[var(--chart-4)]/30";
   };
 
   const getCoverageLabel = (percentage: number) => {
@@ -136,7 +136,7 @@ export default function SystemForecastCoverageGrid() {
   return (
     <div className="space-y-4">
       {/* Overall Coverage Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-4 gap-2">
         {methods.map((method) => {
           const methodData = data.overall_coverage[method];
           return (
@@ -213,10 +213,10 @@ export default function SystemForecastCoverageGrid() {
             <span className="text-sm font-medium">Coverage Quality:</span>
             <div className="flex items-center gap-4">
               {[
-                { label: "Excellent", color: "bg-green-500/20 text-green-700 border-green-500/30", range: "≥90%" },
-                { label: "Good", color: "bg-yellow-500/20 text-yellow-700 border-yellow-500/30", range: "75-89%" },
-                { label: "Fair", color: "bg-orange-500/20 text-orange-700 border-orange-500/30", range: "50-74%" },
-                { label: "Poor", color: "bg-red-500/20 text-red-700 border-red-500/30", range: "<50%" },
+                { label: "Excellent", color: "bg-green-500/20 text-[var(--chart-1)] border-[var(--chart-1)]/30", range: "≥90%" },
+                { label: "Good", color: "bg-yellow-500/20 text-[var(--chart-2)] border-[var(--chart-2)]/30", range: "75-89%" },
+                { label: "Fair", color: "bg-orange-500/20 text-[var(--chart-3)] border-[var(--chart-3)]/30", range: "50-74%" },
+                { label: "Poor", color: "bg-red-500/20 text-[var(--chart-4)] border-[var(--chart-4)]/30", range: "<50%" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-2">
                   <Badge variant="outline" className={`${item.color} px-2 py-1 text-xs`}>
